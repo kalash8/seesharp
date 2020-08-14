@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<time.h>
+void main()
+{
+clock_t start,end,total;
+int f=1;
+int n;
+ printf("Enter the value\n");
+ scanf("%d",&n);
+ start=clock();
+ for(int i=1;i<=n;i++)
+ {
+     f=f*i;
+ }
+ end=clock();
+ total=(end-start)/CLOCKS_PER_SEC;
+ printf("Total time is %1d",total);
+ printf("Factorial = %d\n",f);
+ }
